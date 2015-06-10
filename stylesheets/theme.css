@@ -494,7 +494,7 @@ td {
   display: none;
 }
 /* ==================================================================
- * Two Column Layout 
+ * Two Column Layout
  * ================================================================== */
 #page {
   width: 100%;
@@ -510,7 +510,6 @@ td {
   .twocolumn .en_left_wrapper {
     float: left;
     clear: left;
-    width: 56%;
   }
   .twocolumn .en_right_wrapper {
     float: right;
@@ -521,56 +520,39 @@ td {
 /* ==================================================================
  * basic classes for layouts and reuse of layouts
  * ================================================================== */
-/* ---------- middle macro ------------------------------------------ */
-.middle {
-  width: 80%;
-  padding: 0 3%;
-  max-width: 1200px;
-  clear: both;
-  overflow-x: hidden;
-  overflow-y: visible;
-  margin: 0 auto;
-  position: relative;
-  display: block;
+.en_left_wrapper,
+.en_right_wrapper {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+@media screen and (min-width: 520px) {
+  .en_left_wrapper,
+  .en_right_wrapper {
+    padding-left: 15%;
+    padding-right: 20%;
+  }
 }
 @media screen and (min-width: 780px) {
-  .middle {
-    width: 85%;
+  .en_left_wrapper {
+    padding: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 30em;
+    min-width: 60%;
+  }
+  .en_right_wrapper {
+    max-width: 30em;
+    overflow: hidden;
+    padding-left: 1.5em;
+    padding-right: 2em;
   }
 }
-/* ---------- Menu mobile / default --------------------------------- */
-#main-menu {
-  float: none;
-  clear: both;
-  width: 100%;
-}
-#main-menu li {
-  float: none;
-  clear: both;
-  width: 100%;
-}
-#mobile-menu-icon {
-  display: block;
-  width: 36px;
-  height: 36px;
-  float: right;
-  clear: right;
-  text-indent: 9999px;
-  overflow: hidden;
-}
-@media screen and (min-width: 780px) {
-  #main-menu {
-    float: right;
-    clear: right;
-    width: auto;
-  }
-  #main-menu li {
-    float: left;
-    clear: none;
-    width: auto;
-  }
-  #mobile-menu-icon {
-    display: none;
+@media screen and (min-width: 1150px) {
+  .en_right_wrapper {
+    padding-left: 3em;
+    padding-right: 4em;
   }
 }
 /* ==================================================================
@@ -765,18 +747,19 @@ cite {
 .en_right_wrapper .below-form,
 .en_right_wrapper .no-form {
   background-color: white;
-  margin: 0 -1.5em;
-  padding: 1.47058824em 1.5em;
+  margin: 0 -30%;
+  padding: 1.47058824em 30%;
 }
 .en_right_wrapper .above-form.last {
   border-bottom: 2px solid #eaeaea;
-  margin-bottom: 1.47058824em;
+  margin-bottom: 2.20588235em;
 }
 .en_right_wrapper .below-form.first {
   border-top: 2px solid #eaeaea;
-  margin-top: 1.47058824em;
+  margin-top: 2.20588235em;
 }
-.info-toggle {
+.info-toggle,
+.show-intro {
   display: none;
   cursor: pointer;
   margin-bottom: 1.47058824em;
@@ -795,15 +778,26 @@ cite {
   margin-bottom: 1.31578947em;
 }
 .info-toggle:hover,
-.info-toggle:focus {
+.show-intro:hover,
+.info-toggle:focus,
+.show-intro:focus {
   color: #73736f;
   border-color: #dddddd;
   text-decoration: none;
   box-shadow: 1px 1px 4px #eaeaea;
 }
-.info-toggle:active {
+.info-toggle:active,
+.show-intro:active {
   color: #73736f;
   box-shadow: 1px 1px 4px #eaeaea inset;
+}
+@media screen and (max-width: 780px) {
+  .show-intro {
+    display: block;
+  }
+  #intro-copy {
+    display: none;
+  }
 }
 .disclaimer {
   font-size: 0.88235294em;
@@ -825,8 +819,6 @@ cite {
 /* ---------- general stuff ----------------------------------------- */
 .en_right_wrapper {
   background-color: #f3f3f3;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -846,6 +838,10 @@ cite {
 .eaLabelSpacer,
 br[clear="all"] {
   display: none;
+}
+.eaSubmitResetButtonGroup {
+  display: block;
+  margin-bottom: 1.47058824em;
 }
 /* ---------- buttons ----------------------------------------------- */
 input[type="submit"],

@@ -19,13 +19,30 @@ This way your content gets the right colors, e.g. a white background instead of 
 ```html
 <a class="info-toggle">More info</a>
 
-<div id="background-info" class="background-info-hidden">
+<div id="background-info">
   <h2>Background info</h2>
   <p>more more more info</p>
 </div>
 ```
 
-The `.info-toggle` element enables the "show more info" logic. A click on the toggle shows the element with the id `#background-info` and hides the toggle.
+The `info-toggle` element enables the "show more info" logic. A click on the toggle shows the element with the id `background-info` and hides the toggle. This depends on an id, so you can only use it once per page!
+
+### reduced content on mobile
+
+To hide the intro copy on mobile, we made something similiar to the background info:
+
+```html
+<a class="show-intro">Why should I take this action?</a>
+
+<div id="intro-copy">
+  <h2>Background info</h2>
+  <p>more more more info</p>
+</div>
+```
+
+All the introductory content that should initially be hidden on mobile goes in the `intro-copy` wrapper. On mobile this gets replaced by the `show-intro` link. A click/tap on the link will hide the link and show the intro copy.
+
+Like the info-toggle, this snippet can only be used once per page!
 
 ### progress bar
 

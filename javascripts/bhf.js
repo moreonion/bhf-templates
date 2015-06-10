@@ -48,21 +48,34 @@ $(window).load(function(){
     }
   });
 
-  // add "read more" link functionality
+  // add classes indicating last element above
+  // and first element below the actual form fields
+  $('.above-form').last().addClass("last");
+  $('.below-form').first().addClass("first");
+
+  // add "show more" link functionality
+  function showMore ($toggle, $target) {
+    $toggle.on('click', function(e) {
+      if ($target.length > 0) {
+        $target.slideDown('fast', function(){
+          $toggle.hide();
+        });
+      }
+      e.preventDefault();
+      return false;
+    });
+  }
+  // toggle background info
   $('#background-info').hide();
   $('.info-toggle').css('display', 'block');
-  $('.info-toggle').on('click', function(e) {
-    var $toggle = $(this);
-    var $target = $('#background-info');
-    if ($target.length > 0) {
-      $target.slideDown('fast', function(){
-        $toggle.hide();
-      });
-    }
-    e.preventDefault();
-    return false;
-  });
+  showMore($('.info-toggle'), $('#background-info'));
 
+  // toggle intro text on mobile
+  showMore($('.show-intro'), $('#intro-copy'));
+
+
+  // config settings for
+  // pgbar / thermometer / counter
   function thermoConfig(el) {
     var campaignId = $('input[name="ea.campaign.id"]').val();
     if (!campaignId) {
@@ -100,9 +113,7 @@ $(window).load(function(){
         dataAttr['service'] = thermometerDataService;
       }
     }
-
     config = $.extend(defaults, dataAttrs);
-
     return config;
   }
   // get pgbar config, initialize it
