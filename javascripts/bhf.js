@@ -126,4 +126,8 @@ $(window).load(function(){
     service: thConfig['service'],
     targetDataColumn: 'participatingSupporters'
   });
+
+  $('#sticky-target').sticky({
+    responsiveWidth: true
+  });
 });

@@ -83,6 +83,14 @@ Change the value of data-target according to your needs. Change data-start to ad
 
 Unfortunately, this is a little tricky because the EN editor keeps deleting all data-tags. To save them, you'll have to disable the editor first by clicking the top left x-button. Feel very welcome to complain to Engaging Networks about it!
 
+### sticky heading
+
+```html
+<div id="sticky-target">
+  <h1>This is my sticky heading</h1>
+</div>
+```
+
 ## copy boxes below the form fields
 
 Everything that comes below the actual form fields needs this wrapper:
