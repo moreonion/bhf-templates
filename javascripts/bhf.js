@@ -50,8 +50,10 @@ $(window).load(function(){
 
   // add classes indicating last element above
   // and first element below the actual form fields
-  $('.above-form').last().addClass("last");
-  $('.below-form').first().addClass("first");
+  if ($('.eaRightColumnContent .eaFormField').length) {
+    $('.above-form').last().addClass("last");
+    $('.below-form').first().addClass("first");
+  }
 
   // add "show more" link functionality
   function showMore ($toggle, $target) {
