@@ -522,6 +522,7 @@ td {
  * ================================================================== */
 .en_left_wrapper,
 .en_right_wrapper {
+  position: relative;
   padding-left: 10%;
   padding-right: 10%;
 }
@@ -773,7 +774,7 @@ cite {
 .background-image {
   position: absolute;
   width: 333px;
-  top: 0;
+  bottom: 0;
   right: -20px;
 }
 .en_left_wrapper {
@@ -791,10 +792,11 @@ cite {
 @media screen and (min-width: 780px) {
   .background-image {
     top: auto;
-    right: 0;
     bottom: 0;
+    right: -6%;
+    width: 106%;
+    max-height: 100%;
   }
-  .background-image,
   .background-image img {
     width: 100%;
     max-height: 100%;
@@ -805,6 +807,7 @@ cite {
 }
 @media screen and (min-width: 1150px) {
   .background-image {
+    right: 0;
     width: auto;
   }
 }
@@ -875,9 +878,6 @@ cite {
   }
 }
 /* ---------- right column ------------------------------------------ */
-.en_right_wrapper {
-  position: relative;
-}
 .en_right_wrapper .above-form,
 .en_right_wrapper .below-form,
 .en_right_wrapper .no-form {
@@ -1292,7 +1292,10 @@ label,
   padding: 0.75em 1em;
 }
 .eaFieldErrorHighlightColor {
-  margin-bottom: 0.73529412em;
+  background-color: #f3343c;
+  padding: 10px;
+  color: #ffffff;
+  margin-bottom: 10px;
 }
 .eaValidationIcon {
   display: none;
