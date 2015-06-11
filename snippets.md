@@ -2,6 +2,12 @@
 
 For useful widgets and beautiful styling only some additional html does the trick. Below, there are custom snippets ready-to-use in your EN template. Just copy a snippet of your choice, select "HTML" in the EN editor and paste it there. Once you've pasted the snippet you may change back to "normal" to continue editing. Save and see the magic happen!
 
+## a word about page building in EN
+
+This design is made specifically for a two column layout – so everthing using this template needs to have two columns (including thank you pages, email your friends forms,… everything!) and there needs to be at least one content element in each column.
+
+Also make sure there are no spaces between the elements of each column when building the pages on the "design" editor in EN. Start placing elements at the top and leave no empty fields between them, as this would cause EN to insert extra space elements or even divide the columns into several columns which could produce some really weird effects.
+
 ## copy boxes on the left side
 
 ### big background image

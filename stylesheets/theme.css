@@ -793,10 +793,9 @@ cite {
   .background-image {
     top: auto;
     bottom: 0;
-    right: -6%;
-    width: 106%;
-    max-height: 100%;
+    right: 0;
   }
+  .background-image,
   .background-image img {
     width: 100%;
     max-height: 100%;
@@ -807,7 +806,6 @@ cite {
 }
 @media screen and (min-width: 1150px) {
   .background-image {
-    right: 0;
     width: auto;
   }
 }
@@ -1092,9 +1090,6 @@ textarea,
 .eaMessagecontent {
   font-size: 100%;
 }
-.eaMessageSignoffContainer {
-  display: none;
-}
 /* ---------- checkbox & radio -------------------------------------- */
 input[type="checkbox"] {
   width: auto;
@@ -1353,14 +1348,23 @@ label,
   text-decoration: underline;
 }
 /* ==================================================================
- * contact lists
+ * email your MP
  * ================================================================== */
+/* ---------- message ----------------------------------------------- */
+.eaSwitchSubjectContainer {
+  margin-top: 1.47058824em;
+  margin-bottom: 0.73529412em;
+}
+.eaMessagecontent {
+  min-height: 15em;
+}
+.eaMessageSignoffContainer {
+  display: none;
+}
 /* ---------- contact ----------------------------------------------- */
 /* select contact instruction text */
 /* container for contacts */
 .eaContactsContainer {
-  float: left;
-  width: 95%;
   position: relative;
   padding: 10px;
   background-color: #ffffff;
@@ -1368,63 +1372,47 @@ label,
 }
 /* contact name container */
 .eaContactNameContainer {
-  float: left;
   position: relative;
-  clear: left;
   font-family: "Myriad Pro", "Myriad", Arial, "Helvetica Neue", Helvetica, sans;
   font-weight: bold;
   font-style: normal;
-  padding-right: 10px;
-  width: 48%;
-  height: 25px;
 }
 /* contact organization container */
 .eaContactOrgContainer {
-  float: left;
-  width: 48%;
   position: relative;
 }
 /* contact biographyLink container */
 .eaContactBiographyLinkContainer {
-  float: left;
   position: relative;
   font-family: "Myriad Pro", "Myriad", Arial, "Helvetica Neue", Helvetica, sans;
   font-weight: bold;
   font-style: normal;
-  height: 25px;
   padding-top: 4px;
-  width: 125px;
 }
 /* contact biography container */
 .eaContactBiographyContainer {
-  float: left;
   position: relative;
-  width: 90%;
-  clear: left;
-  padding-left: 0;
   padding-right: 0;
 }
 /* contact biography list */
 .eaContactBiographyList {
-  float: left;
   position: relative;
-  width: 350px;
   margin-top: 20px;
 }
 /* contact biography line container */
 .eaContactBiographyLineContainer {
-  clear: left;
   padding-left: 0px;
   padding-bottom: 5px;
   list-style-type: disc;
 }
 .eaContactBiographyPictureContainer {
-  float: left;
   position: relative;
   width: 125px;
 }
 /* contact select checkbox */
 .eaContactSelectCheckbox {
+  position: absolute;
+  left: 0;
   color: #666666;
   border-top-style: none;
   border-right-style: none;
@@ -1435,33 +1423,24 @@ label,
 /* ---------- Multiple contact tabbed list--------------------------- */
 /* container for a contact */
 .eaContactContainer {
-  float: left;
-  width: 98%;
   position: relative;
   padding-left: 5px;
   margin-bottom: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
-  border: 1px solid #eaeaea;
   background-color: #fff;
 }
 /* container for a contact's detail */
 .eaContactDetailContainer {
-  float: left;
-  width: 98%;
   position: relative;
   padding-top: 10px;
   padding-left: 5px;
-  clear: left;
   margin-top: 10px;
 }
 /* container for a contact's issue comments */
 .eaContactCommentContainer {
   position: relative;
-  float: left;
-  clear: left;
   margin-left: 0px;
-  width: 98%;
   padding-top: 10px;
   padding-left: 10px;
   border: 1px solid #bfbfbf;
@@ -1476,18 +1455,13 @@ label,
 }
 /* contact party container */
 .eaContactPartyContainer {
-  float: left;
-  clear: both;
   margin-left: 200px;
-  width: 200px;
   top: -10px;
   position: relative;
   padding-left: 10px;
 }
 /* contact position container */
 .eaContactPositionContainer {
-  float: left;
-  width: 50%;
   position: relative;
   padding-left: 0px;
 }
@@ -1558,6 +1532,11 @@ label,
   visibility: hidden;
   line-height: 0;
   height: 0;
+}
+/* ---------- email a friend ---------------------------------------- */
+.eaSenderMailTemplate {
+  min-height: 10em;
+  margin-bottom: 0.73529412em;
 }
 /* ---------- MO share light ---------------------------------------- */
 ul.share-links {

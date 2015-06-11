@@ -130,4 +130,9 @@ $(window).load(function(){
   $('#sticky-target').sticky({
     responsiveWidth: true
   });
+  // WORKAROUND stickyjs not resetting element height
+  // when stickyness ends
+  $('#sticky-target').on('sticky-end', function (){
+    $('.sticky-wrapper').css('height', '');
+  });
 });
