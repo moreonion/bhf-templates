@@ -526,7 +526,6 @@ td {
   padding-right: 10%;
 }
 @media screen and (min-width: 520px) {
-  .en_left_wrapper,
   .en_right_wrapper {
     padding-left: 15%;
     padding-right: 20%;
@@ -553,6 +552,16 @@ td {
   .en_right_wrapper {
     padding-left: 3em;
     padding-right: 4em;
+  }
+}
+@media screen and (min-width: 1700px) {
+  .en_left_wrapper {
+    right: 36em;
+  }
+  .en_right_wrapper {
+    max-width: 36em;
+    padding-left: 5em;
+    padding-right: 7em;
   }
 }
 /* ==================================================================
@@ -644,6 +653,15 @@ h1 {
   line-height: 0.83333333em;
   margin-bottom: 0.41666667em;
 }
+@media screen and (min-width: 1550px) {
+  .en_left_wrapper h1 {
+    line-height: 1.04166667em;
+    font-size: 5.64705882em;
+    font-size: 5.64705882rem;
+    line-height: 0.78125em;
+    margin-bottom: 0.26041667em;
+  }
+}
 h2,
 legend {
   line-height: 1.66666667em;
@@ -708,7 +726,7 @@ h6 {
   color: #ffffff;
 }
 /* ---------- quotes ------------------------------------------------ */
-blockquote {
+.quote blockquote {
   line-height: 1.25em;
   font-size: 3.52941176em;
   font-size: 3.52941176rem;
@@ -718,9 +736,19 @@ blockquote {
   font-weight: 400;
   font-style: normal;
   text-transform: uppercase;
+  margin-top: 0;
 }
-blockquote p {
+.quote blockquote p {
   margin-bottom: 0;
+}
+@media screen and (min-width: 1550px) {
+  .quote blockquote {
+    line-height: 1.04166667em;
+    font-size: 5.64705882em;
+    font-size: 5.64705882rem;
+    line-height: 0.78125em;
+    margin-bottom: 0.26041667em;
+  }
 }
 cite {
   font-size: 0.88235294em;
@@ -741,14 +769,121 @@ cite {
 #main {
   overflow: visible;
 }
+/* ---------- background image -------------------------------------- */
+.background-image {
+  position: absolute;
+  width: 333px;
+  top: 0;
+  right: -20px;
+}
+.en_left_wrapper {
+  min-height: 360px;
+}
+@media screen and (min-width: 520px) {
+  .background-image {
+    width: 404px;
+    right: 0;
+  }
+  .en_left_wrapper {
+    min-height: 440px;
+  }
+}
+@media screen and (min-width: 780px) {
+  .background-image {
+    top: auto;
+    right: 0;
+    bottom: 0;
+  }
+  .background-image,
+  .background-image img {
+    width: 100%;
+    max-height: 100%;
+  }
+  .en_left_wrapper {
+    min-height: none;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .background-image {
+    width: auto;
+  }
+}
+@media screen and (min-width: 1700px) {
+  .background-image {
+    width: 900px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .background-image img {
+    max-height: none;
+  }
+}
 /* ---------- left column ------------------------------------------- */
+.en_left_wrapper .fixed {
+  position: relative;
+  z-index: 1;
+}
+.en_left_wrapper .quote {
+  max-width: 18em;
+  padding-top: 160px;
+}
+.logo {
+  position: absolute;
+  z-index: 1;
+  margin-top: 1.47058824em;
+  margin-left: 10%;
+  max-width: 30%;
+  width: 100px;
+}
+@media screen and (min-width: 780px) {
+  .logo {
+    position: fixed;
+  }
+  .logo,
+  .fixed {
+    margin-left: 2em;
+    width: auto;
+  }
+  .en_left_wrapper .quote {
+    padding-top: 240px;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .logo,
+  .fixed {
+    margin-left: 4em;
+  }
+  .en_left_wrapper .quote {
+    padding-top: 260px;
+  }
+}
+@media screen and (min-width: 1550px) {
+  .logo,
+  .fixed {
+    margin-left: 5em;
+  }
+  .en_left_wrapper .quote {
+    max-width: 30em;
+    padding-top: 280px;
+  }
+}
+@media screen and (min-width: 1700px) {
+  .logo,
+  .fixed {
+    margin-left: 6em;
+  }
+}
 /* ---------- right column ------------------------------------------ */
+.en_right_wrapper {
+  position: relative;
+}
 .en_right_wrapper .above-form,
 .en_right_wrapper .below-form,
 .en_right_wrapper .no-form {
   background-color: white;
-  margin: 0 -30%;
-  padding: 1.47058824em 30%;
+  margin: 0 -50%;
+  padding: 1.47058824em 50%;
 }
 .en_right_wrapper .above-form.last {
   border-bottom: 2px solid #eaeaea;
@@ -1157,10 +1292,7 @@ label,
   padding: 0.75em 1em;
 }
 .eaFieldErrorHighlightColor {
-  background-color: #f3343c;
-  padding: 10px;
-  color: #ffffff;
-  margin-bottom: 10px;
+  margin-bottom: 0.73529412em;
 }
 .eaValidationIcon {
   display: none;
@@ -1204,7 +1336,6 @@ label,
   background-color: #ec1b30;
   padding: 0.73529412em 3%;
   color: #ffffff;
-  margin-bottom: 1.47058824em;
 }
 #eaerrors a {
   color: #ffffff;
