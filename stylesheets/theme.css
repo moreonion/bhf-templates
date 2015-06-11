@@ -1542,6 +1542,7 @@ label,
 ul.share-links {
   display: block;
   max-width: 550px;
+  margin: 0;
 }
 ul.share-links li {
   list-style: none;
