@@ -1,0 +1,72 @@
+/* ---------- desktop layout --------------------------------------- */
+
+.en_left_wrapper,
+.en_right_wrapper  {
+  float: left;
+  clear: left;
+}
+
+.twocolumn .en_left_wrapper {
+  float: left;
+  clear: left;
+}
+
+.twocolumn .en_right_wrapper {
+  float: right;
+  clear: right;
+  width: 40%;
+}
+
+.en_left_wrapper {
+  padding: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 30em;
+  min-width: 60%;
+}
+
+.en_right_wrapper {
+  max-width: 30em;
+  overflow: hidden;
+  padding-left: 3em;
+  padding-right: 4em;
+}
+
+/* ---------- desktop styles --------------------------------------- */
+
+.background-image {
+  top: auto;
+  bottom: 0;
+  right: 0;
+  width: auto;
+  max-height: 100%;
+}
+.background-image img {
+  width: 100%;
+  max-height: 100%;
+}
+.en_left_wrapper {
+  min-height: none;
+}
+
+.logo {
+  position: fixed;
+}
+.logo,
+.fixed {
+  margin-left: 4em;
+  width: auto;
+}
+
+.en_left_wrapper .quote {
+  padding-top: 260px;
+}
+
+.is-sticky #sticky-target {
+  padding-left: 3em;
+  padding-right: 4em;
+  margin-left: -3em;
+  margin-right: -4em;
+}
