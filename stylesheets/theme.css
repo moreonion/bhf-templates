@@ -778,7 +778,7 @@ cite {
   right: -20px;
 }
 .en_left_wrapper {
-  min-height: 360px;
+  min-height: 380px;
 }
 @media screen and (min-width: 520px) {
   .background-image {
@@ -786,7 +786,7 @@ cite {
     right: 0;
   }
   .en_left_wrapper {
-    min-height: 440px;
+    min-height: 460px;
   }
 }
 @media screen and (min-width: 780px) {
@@ -892,6 +892,10 @@ cite {
   border-top: 2px solid #eaeaea;
   margin-top: 2.20588235em;
   padding-top: 1.47058824em;
+}
+.en_right_wrapper .above-form.first,
+.en_right_wrapper .no-form.first {
+  padding-top: 1.97058824em;
 }
 .info-toggle,
 .show-intro {
@@ -1620,20 +1624,47 @@ ul.share-links .email span.icon {
   background-color: #f3343c;
 }
 /* ---------- sticky header ----------------------------------------- */
-.is-sticky #sticky-target {
+#sticky-target {
+  transition: transform 2s ease-in-out;
+  transform: translateY(0px);
+}
+#sticky-target.up {
+  transition: transform 0s;
+}
+#sticky-target.down {
+  transform: translateY(-200px);
+}
+#sticky-target.stuck {
+  transform: translateY(0px);
+}
+.stuck {
+  position: fixed;
+  top: 0;
+}
+#sticky-target.stuck {
   background-color: white;
   z-index: 100;
   border-bottom: 2px solid #eaeaea;
+  padding-top: 1em;
+  padding-bottom: 0.73529412em;
   padding-left: 10%;
   padding-right: 10%;
   margin-left: -10%;
   margin-right: -10%;
 }
-.is-sticky #sticky-target h1 {
+#sticky-target.stuck h1 {
   margin: 0;
+  width: auto;
+}
+.sticky-wrapper,
+.sticky-wrapper .stuck {
+  box-sizing: border-box;
+  width: 100%;
 }
 @media screen and (min-width: 520px) {
-  .is-sticky #sticky-target {
+  #sticky-target.stuck {
+    padding-top: 1.47058824em;
+    padding-bottom: 1em;
     padding-left: 15%;
     padding-right: 20%;
     margin-left: -15%;
@@ -1641,15 +1672,20 @@ ul.share-links .email span.icon {
   }
 }
 @media screen and (min-width: 780px) {
-  .is-sticky #sticky-target {
+  #sticky-target.stuck {
+    padding-top: 1.97058824em;
     padding-left: 1.5em;
     padding-right: 2em;
     margin-left: -1.5em;
     margin-right: -2em;
   }
+  .twocolumn .sticky-wrapper .stuck {
+    width: 40%;
+    max-width: 30em;
+  }
 }
 @media screen and (min-width: 1150px) {
-  .is-sticky #sticky-target {
+  #sticky-target.stuck {
     padding-left: 3em;
     padding-right: 4em;
     margin-left: -3em;
@@ -1657,10 +1693,13 @@ ul.share-links .email span.icon {
   }
 }
 @media screen and (min-width: 1700px) {
-  .is-sticky #sticky-target {
+  #sticky-target.stuck {
     padding-left: 5em;
     padding-right: 7em;
     margin-left: -5em;
     margin-right: -7em;
+  }
+  .twocolumn .sticky-wrapper .stuck {
+    max-width: 36em;
   }
 }

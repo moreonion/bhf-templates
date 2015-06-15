@@ -51,9 +51,10 @@ $(window).load(function(){
   // add classes indicating last element above
   // and first element below the actual form fields
   if ($('.eaRightColumnContent .eaFormField').length) {
-    $('.above-form').last().addClass("last");
-    $('.below-form').first().addClass("first");
+    $('.en_right_wrapper .above-form').last().addClass("last");
+    $('.en_right_wrapper .below-form').first().addClass("first");
   }
+  $('.en_right_wrapper .above-form, .en_right_wrapper .no-form').first().addClass("first");
 
   // add "show more" link functionality
   function showMore ($toggle, $target) {
@@ -129,12 +130,22 @@ $(window).load(function(){
     targetDataColumn: 'participatingSupporters'
   });
 
-  $('#sticky-target').sticky({
-    responsiveWidth: true
+  // sticky header
+  var sticky = new Waypoint.Sticky({
+    element: $('#sticky-target')[0],
+    offset: -150
   });
-  // WORKAROUND stickyjs not resetting element height
-  // when stickyness ends
-  $('#sticky-target').on('sticky-end', function (){
-    $('.sticky-wrapper').css('height', '');
+  var waypointhidden = new Waypoint({
+    element: $('#sticky-target')[0],
+    offset: -50,
+    handler: function (direction) {
+      if (direction == "down") {
+        $(this.element).addClass("down")
+        $(this.element).removeClass("up")
+      } else if (direction == "up")  {
+        $(this.element).removeClass("down")
+        $(this.element).addClass("up")
+      }
+    }
   });
 });
