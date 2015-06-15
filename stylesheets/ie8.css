@@ -41,6 +41,7 @@
   bottom: 0;
   right: 0;
   width: auto;
+  max-width: 800px;
   max-height: 100%;
 }
 .background-image img {
@@ -49,6 +50,7 @@
 }
 .en_left_wrapper {
   min-height: none;
+  right: 37em;
 }
 
 .logo {
@@ -60,6 +62,9 @@
   width: auto;
 }
 
+.quote blockquote cite {
+  font-size: 0.25em;
+}
 .en_left_wrapper .quote {
   padding-top: 260px;
 }
