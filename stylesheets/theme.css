@@ -984,6 +984,8 @@ cite {
   display: inline;
 }
 .eaLeftColumnFiller,
+.eaRightColumnFiller,
+.eaTwoColumnFiller,
 .eaLabelSpacer,
 br[clear="all"] {
   display: none;
