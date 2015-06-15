@@ -1638,8 +1638,12 @@ ul.share-links .email span.icon {
   transform: translateY(0px);
 }
 .stuck {
-  position: fixed;
   top: 0;
+}
+@media screen and (min-width: 780px) {
+  .stuck {
+    position: fixed;
+  }
 }
 #sticky-target.stuck {
   background-color: white;

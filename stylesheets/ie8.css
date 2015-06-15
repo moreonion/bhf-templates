@@ -64,9 +64,18 @@
   padding-top: 260px;
 }
 
-.is-sticky #sticky-target {
+.stuck {
+  position: fixed;
+}
+#sticky-target.stuck {
+  padding-top: 1.97058824em;
+  padding-bottom: 1em;
   padding-left: 3em;
   padding-right: 4em;
   margin-left: -3em;
   margin-right: -4em;
+}
+.twocolumn .sticky-wrapper .stuck {
+  width: 40%;
+  max-width: 30em;
 }
