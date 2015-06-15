@@ -64,6 +64,15 @@
   padding-top: 260px;
 }
 
+#eaerrors {
+  float: right;
+  width: 40%;
+  max-width: 34em;
+  padding-left: 3.4em;
+  padding-right: 4.5em;
+  z-index: 0;
+}
+
 .stuck {
   position: fixed;
 }

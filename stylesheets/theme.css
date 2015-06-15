@@ -1343,24 +1343,52 @@ label,
   list-style-type: none;
 }
 #eaerrors {
-  background-color: #ec1b30;
-  padding: 0.73529412em 3%;
-  color: #ffffff;
+  background-color: #eaeaea;
+  padding: 0.73529412em 10%;
+  border-bottom: 2px solid #eaeaea;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
 }
-#eaerrors a {
-  color: #ffffff;
-  text-decoration: underline;
+@media screen and (min-width: 780px) {
+  #eaerrors {
+    float: right;
+    width: 40%;
+    max-width: 34em;
+    padding-left: 1.7em;
+    padding-right: 2.3em;
+    z-index: 0;
+  }
+}
+@media screen and (min-width: 1150px) {
+  #eaerrors {
+    padding-left: 3.4em;
+    padding-right: 4.5em;
+  }
+}
+@media screen and (min-width: 1700px) {
+  #eaerrors {
+    max-width: 40.8em;
+    padding-left: 6.8em;
+    padding-right: 7.9em;
+  }
 }
 /* ==================================================================
  * email your MP
  * ================================================================== */
 /* ---------- message ----------------------------------------------- */
+.eaSwitchTemplateContainer {
+  margin-bottom: 1.47058824em;
+}
 .eaSwitchSubjectContainer {
   margin-top: 1.47058824em;
   margin-bottom: 0.73529412em;
 }
-.eaMessagecontent {
+.eaMessageContent {
   min-height: 15em;
+  margin-bottom: 0.73529412em;
 }
 .eaMessageSignoffContainer {
   display: none;

@@ -50,7 +50,7 @@ $(window).load(function(){
 
   // add classes indicating last element above
   // and first element below the actual form fields
-  if ($('.eaRightColumnContent .eaFormField').length) {
+  if ($('.eaRightColumnContent .eaFormField, .eaRightColumnContent .eaMessageContent').length) {
     $('.en_right_wrapper .above-form').last().addClass("last");
     $('.en_right_wrapper .below-form').first().addClass("first");
   }
