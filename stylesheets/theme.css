@@ -813,9 +813,6 @@ cite {
 @media screen and (min-width: 1700px) {
   .background-image {
     width: 900px;
-    top: 0;
-    right: 0;
-    bottom: 0;
   }
   .background-image img {
     max-height: none;
