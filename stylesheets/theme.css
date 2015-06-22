@@ -1390,6 +1390,9 @@ label,
   margin-top: 1.47058824em;
   margin-bottom: 0.73529412em;
 }
+.eaSwitchSubjectContainer input {
+  font-size: 100%;
+}
 .eaMessageContent {
   min-height: 15em;
   margin-bottom: 0.73529412em;
