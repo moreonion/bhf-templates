@@ -989,7 +989,11 @@ br[clear="all"] {
 }
 .eaSubmitResetButtonGroup {
   display: block;
-  margin-bottom: 1.47058824em;
+}
+@media screen and (min-width: 780px) {
+  .eaSubmitResetButtonGroup {
+    margin-bottom: 1.47058824em;
+  }
 }
 /* ---------- buttons ----------------------------------------------- */
 input[type="submit"],

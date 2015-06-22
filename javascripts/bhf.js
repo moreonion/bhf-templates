@@ -5,10 +5,10 @@ $(window).load(function(){
     $('body').addClass('twocolumn');
 
     // button placement
-    if ($('.below-form').length) {
-      $('.below-form').first().parent().before($('.eaSubmitResetButtonGroup'));
+    if ($('#main .below-form').length) {
+      $('#main .below-form').first().parent().before($('.eaSubmitResetButtonGroup'));
     } else {
-      $('.eaSubmitResetButtonGroup').appendTo($('.en_right_wrapper').last());
+      $('.eaSubmitResetButtonGroup').appendTo($('#main .en_right_wrapper').last());
     }
   }
 
